@@ -355,9 +355,7 @@ olist_ecommerce
 
 2. Run the table-creation portion of:
 
-```text
-sql/01_database_setup.sql
-```
+[01_database_setup.sql](sql/01_database_setup.sql)
 
 3. Import the CSV files through pgAdmin.
 
@@ -375,21 +373,13 @@ order_reviews
 geolocation
 ```
 
-4. Run the relationship section in `01_database_setup.sql`.
+4. Run the relationship section in [01_database_setup.sql](sql/01_database_setup.sql).
 
 5. Run the import-validation and relationship-integrity checks.
 
-6. Run:
+6. Run:[02_data_quality.sql](sql/02_data_quality.sql)
 
-```text
-sql/02_data_quality.sql
-```
-
-7. Run:
-
-```text
-sql/03_business_analysis.sql
-```
+7. Run: [03_business_analysis.sql](sql/03_business_analysis.sql)
 
 > Note: the foreign-key `ADD CONSTRAINT` statements are intended to be run once on a fresh setup. Re-running them after the constraints already exist will return an "already exists" error.
 
